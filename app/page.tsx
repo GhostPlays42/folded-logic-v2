@@ -132,6 +132,7 @@ export default function Home() {
             <a href="#work" className="hover:text-white transition">Work</a>
             <a href="#about" className="hover:text-white transition">About</a>
             <a href="#contact" className="hover:text-white transition">Contact</a>
+            <Link href="/faq" className="hover:text-white transition font-bold text-blue-500">FAQ</Link>
           </nav>
 
           {/* Mobile Hamburger Button */}
@@ -164,6 +165,7 @@ export default function Home() {
             <a href="#work" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-zinc-300 hover:text-white transition">Work</a>
             <a href="#about" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-zinc-300 hover:text-white transition">About</a>
             <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-blue-500 hover:text-blue-400 transition">Contact</a>
+            <Link href="/faq" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-bold text-zinc-300 hover:text-white transition">FAQ</Link>
           </div>
         </div>
       </header>
@@ -570,4 +572,3 @@ export default function Home() {
     </main>
   );
 }
-// Triggering new Vercel deployment.git add .
