@@ -122,7 +122,7 @@ export default function Home() {
               className="w-16 h-16 md:w-20 md:h-20"
             />
             <span className="text-white font-bold text-lg md:text-xl tracking-tight">
-              Folded Logic <span className="hidden lg:inline text-zinc-500 font-normal">| Intelligent Web Solutions</span>
+              Folded Logic <span className="hidden lg:inline text-zinc-500 font-normal">| Web Design in Peachland & the Central Okanagan</span>
             </span>
           </a>
 
