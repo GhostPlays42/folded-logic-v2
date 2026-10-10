@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { supabase } from '../lib/supabase';
+import { getSupabase } from '../lib/supabase';
 import { business } from '../lib/business';
 import SiteFooter from './SiteFooter';
 
@@ -38,7 +38,7 @@ export default function HomeContent() {
     const message = formData.get("message") as string;
 
     try {
-      const { error } = await supabase
+      const { error } = await getSupabase()
         .from('leads')
         .insert([
           {
