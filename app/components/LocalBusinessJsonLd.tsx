@@ -13,6 +13,7 @@ export default function LocalBusinessJsonLd() {
     description: business.description,
     email: business.email,
     telephone: business.phoneE164,
+    sameAs: [business.googleBusinessProfile],
     address: {
       "@type": "PostalAddress",
       addressLocality: business.locality,

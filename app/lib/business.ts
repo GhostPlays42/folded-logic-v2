@@ -6,6 +6,7 @@ export const business = {
   email: "mat@foldedlogic.ca",
   phone: "(250) 300-9463",
   phoneE164: "+12503009463",
+  googleBusinessProfile: "https://share.google/t80GcSa39HaH9c9TP",
   locality: "Peachland",
   region: "BC",
   country: "CA",
