@@ -23,20 +23,11 @@
 }
 
 .animate-slide-left {
-  animation: slideInLeft 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-slide-right {
-  animation: slideInRight 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.animate-scroll-infinite {
-  /* 40s is the speed. Lower = faster, Higher = slower */
-  animation: scrollLeft 40s linear infinite;
+  animation: slideInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 @keyframes scrollLeft {
   0% { transform: translateX(0); }
@@ -56,4 +47,16 @@
 /* Add this new reverse class */
 .animate-scroll-infinite-reverse {
   animation: scrollRight 45s linear infinite; /* Slightly slower than the top track for a cool parallax feel */
+}
+
+/* Respect visitors who ask their OS for less motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

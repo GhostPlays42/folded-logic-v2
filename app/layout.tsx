@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LocalBusinessJsonLd from "./components/LocalBusinessJsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,14 +34,6 @@ export const metadata: Metadata = {
     description: "Custom web design and full-stack software development based in Peachland, BC.",
     url: 'https://foldedlogic.ca',
     siteName: 'Folded Logic',
-    images: [
-      {
-        url: '/og-image.png', // You will need to add this image to your public folder
-        width: 1200,
-        height: 630,
-        alt: 'Folded Logic - Custom Web Solutions',
-      },
-    ],
     locale: 'en_CA',
     type: 'website',
   },
@@ -48,7 +41,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Folded Logic | Custom Web Design & Software Development",
     description: "Custom web design and full-stack software development based in Peachland, BC.",
-    images: ['/og-image.png'],
   },
 };
 
@@ -62,7 +54,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LocalBusinessJsonLd />
+        {children}
+      </body>
     </html>
   );
 }
