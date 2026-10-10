@@ -2,7 +2,7 @@
 // structured data. Keep these matching the Google Business Profile exactly.
 export const business = {
   name: "Folded Logic",
-  url: "https://foldedlogic.ca",
+  url: "https://www.foldedlogic.ca",
   email: "mat@foldedlogic.ca",
   phone: "(250) 300-9463",
   phoneE164: "+12503009463",

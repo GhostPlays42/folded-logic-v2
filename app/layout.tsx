@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 // Beefed up Local SEO & Social Sharing Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://foldedlogic.ca'),
+  metadataBase: new URL('https://www.foldedlogic.ca'),
   title: "Folded Logic | Custom Web Design & Software Development",
   description: "Custom web design and full-stack software development based in Peachland, BC. Proudly serving West Kelowna, Kelowna, the broader Okanagan, and British Columbia.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Folded Logic | Custom Web Design & Software Development",
     description: "Custom web design and full-stack software development based in Peachland, BC.",
-    url: 'https://foldedlogic.ca',
+    url: 'https://www.foldedlogic.ca',
     siteName: 'Folded Logic',
     locale: 'en_CA',
     type: 'website',

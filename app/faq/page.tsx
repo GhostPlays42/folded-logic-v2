@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FAQ | Folded Logic Web Solutions",
     description: "Answers to your questions about custom web development, high-performance architecture, and SEO in BC.",
-    url: "https://foldedlogic.ca/faq",
+    url: "https://www.foldedlogic.ca/faq",
     siteName: "Folded Logic",
     locale: "en_CA",
     type: "website",

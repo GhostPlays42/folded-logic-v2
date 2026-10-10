@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://foldedlogic.ca/sitemap.xml",
+    sitemap: "https://www.foldedlogic.ca/sitemap.xml",
   };
 }
