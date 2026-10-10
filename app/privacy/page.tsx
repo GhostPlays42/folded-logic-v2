@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Folded Logic",
+  description: "How Folded Logic collects, uses and protects the information you share through our website and project questionnaire.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (
@@ -73,10 +81,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Simple Footer */}
-      <footer className="bg-zinc-950 border-t border-zinc-900 py-12 text-center text-zinc-500 text-sm">
-        <p>© {new Date().getFullYear()} Folded Logic. All rights reserved.</p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import SiteFooter from "../components/SiteFooter";
+
+export const metadata: Metadata = {
+  title: "Terms of Service | Folded Logic",
+  description: "The terms that govern use of the Folded Logic website and our web design, development and hosting services.",
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsPage() {
   return (
@@ -73,10 +81,7 @@ export default function TermsPage() {
         </div>
       </section>
 
-      {/* Simple Footer */}
-      <footer className="bg-zinc-950 border-t border-zinc-900 py-12 text-center text-zinc-500 text-sm">
-        <p>© {new Date().getFullYear()} Folded Logic. All rights reserved.</p>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }

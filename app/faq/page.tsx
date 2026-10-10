@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import SiteFooter from "../components/SiteFooter";
 
 // 1. Full SEO Metadata for the FAQ Page
 export const metadata: Metadata = {
@@ -9,9 +10,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FAQ | Folded Logic Web Solutions",
     description: "Answers to your questions about custom web development, high-performance architecture, and SEO in BC.",
-    url: "https://foldedlogic.ca/faq",
-    images: ["/og-image.png"],
+    url: "https://www.foldedlogic.ca/faq",
+    siteName: "Folded Logic",
+    locale: "en_CA",
+    type: "website",
   },
+  alternates: { canonical: "/faq" },
 };
 
 // 2. FAQ Data Structure (Keeps your code clean and feeds the Schema markup)
@@ -133,7 +137,7 @@ export default function FAQPage() {
       {/* Invisible Script Tag that injects the SEO Schema into the <head> */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
 
       {/* Simple Header for Navigation */}
@@ -196,7 +200,8 @@ export default function FAQPage() {
           ))}
         </div>
       </section>
-      
+
+      <SiteFooter />
     </main>
   );
 }

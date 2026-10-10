@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import LocalBusinessJsonLd from "./components/LocalBusinessJsonLd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 
 // Beefed up Local SEO & Social Sharing Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://foldedlogic.ca'),
+  metadataBase: new URL('https://www.foldedlogic.ca'),
   title: "Folded Logic | Custom Web Design & Software Development",
   description: "Custom web design and full-stack software development based in Peachland, BC. Proudly serving West Kelowna, Kelowna, the broader Okanagan, and British Columbia.",
   keywords: [
@@ -31,16 +32,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Folded Logic | Custom Web Design & Software Development",
     description: "Custom web design and full-stack software development based in Peachland, BC.",
-    url: 'https://foldedlogic.ca',
+    url: 'https://www.foldedlogic.ca',
     siteName: 'Folded Logic',
-    images: [
-      {
-        url: '/og-image.png', // You will need to add this image to your public folder
-        width: 1200,
-        height: 630,
-        alt: 'Folded Logic - Custom Web Solutions',
-      },
-    ],
     locale: 'en_CA',
     type: 'website',
   },
@@ -48,7 +41,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Folded Logic | Custom Web Design & Software Development",
     description: "Custom web design and full-stack software development based in Peachland, BC.",
-    images: ['/og-image.png'],
   },
 };
 
@@ -62,7 +54,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LocalBusinessJsonLd />
+        {children}
+      </body>
     </html>
   );
 }
