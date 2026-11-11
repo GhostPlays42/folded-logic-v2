@@ -18,8 +18,9 @@ export default function PrivacyPage() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Image
-              src="/folded-logic-logo-no-bg.svg"
+              src="/folded-logic-logo.png"
               alt="Folded Logic Logo"
+              preload
               width={80}
               height={80}
               className="w-16 h-16 md:w-20 md:h-20"

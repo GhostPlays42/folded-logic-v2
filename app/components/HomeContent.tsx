@@ -117,8 +117,9 @@ export default function HomeContent() {
           {/* Logo - Clicks close the menu in case it's open */}
           <a href="#" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
             <Image
-              src="/folded-logic-logo-no-bg.svg"
+              src="/folded-logic-logo.png"
               alt="Folded Logic Logo"
+              preload
               width={80}
               height={80}
               className="w-16 h-16 md:w-20 md:h-20"
@@ -159,7 +160,7 @@ export default function HomeContent() {
         {/* Mobile Dropdown Menu */}
         <div 
           className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? "max-h-64 opacity-100 border-b border-zinc-800" : "max-h-0 opacity-0"
+            isMobileMenuOpen ? "max-h-[30rem] opacity-100 border-b border-zinc-800" : "max-h-0 opacity-0"
           }`}
         >
           <div className="flex flex-col gap-6 px-6 py-8 bg-zinc-950/95 backdrop-blur-md text-center">
@@ -434,7 +435,7 @@ export default function HomeContent() {
             >
                 <div className="w-14 h-14 bg-zinc-950 rounded-2xl flex items-center justify-center shrink-0 border border-zinc-800 group-hover:border-blue-500/50 transition-colors">
                 <Image 
-                  src="/folded-logic-logo-no-bg.svg" 
+                  src="/folded-logic-logo.png" 
                   alt="Folded Logic Logo" 
                   width={100} 
                   height={100} 

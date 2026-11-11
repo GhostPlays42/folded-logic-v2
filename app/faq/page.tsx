@@ -145,8 +145,9 @@ export default function FAQPage() {
         <div className="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Image
-              src="/folded-logic-logo-no-bg.svg"
+              src="/folded-logic-logo.png"
               alt="Folded Logic Logo"
+              preload
               width={48}
               height={48}
               className="w-12 h-12"
