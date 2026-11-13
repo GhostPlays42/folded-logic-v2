@@ -20,10 +20,13 @@ export default function LocalBusinessJsonLd() {
       addressRegion: business.region,
       addressCountry: business.country,
     },
-    areaServed: business.areasServed.map((city) => ({
-      "@type": "City",
-      name: `${city}, ${business.region}`,
-    })),
+    areaServed: [
+      ...business.areasServed.map((city) => ({
+        "@type": "City",
+        name: `${city}, ${business.region}`,
+      })),
+      { "@type": "State", name: "British Columbia" },
+    ],
     knowsAbout: [
       "Web design",
       "Web development",

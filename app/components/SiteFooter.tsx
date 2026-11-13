@@ -9,7 +9,7 @@ export default function SiteFooter() {
         <div>
           <p className="text-white font-bold text-base mb-2">{business.name}</p>
           <p>Web design &amp; development based in {business.locality}, {business.region}.</p>
-          <p className="mt-2">Serving {business.areasServed.join(", ")} and the Okanagan.</p>
+          <p className="mt-2">Serving {business.areasServed.join(", ")}, the Okanagan and businesses across British Columbia.</p>
         </div>
         <div>
           <p className="text-white font-bold text-base mb-2">Contact</p>
